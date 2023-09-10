@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="all.css">
     <title>Document</title>
 </head>
 <body>
     <h1>This is the Test.</h1>
+    <input type="password" id="password">
+    <button onclick="SwitchVisibility()">Show/Hide</button>
 </body>
+<script>
+    const passwordField = document.getElementById("password");
+
+    function SwitchVisibility() {
+        if(passwordField.getAttribute("type") === "password") {
+            passwordField.setAttribute("type", "text");
+        }
+        else {
+            passwordField.setAttribute("type", "password");
+        }
+    }
+</script>
 </html>
